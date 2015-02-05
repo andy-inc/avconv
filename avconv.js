@@ -164,7 +164,7 @@ module.exports = function avconv(params) {
     });
 
     stream.kill = function() {
-        avconv.kill();
+        avconv.kill('SIGKILL');
     };
 
     return stream;
